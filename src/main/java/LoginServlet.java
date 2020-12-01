@@ -15,10 +15,10 @@ import java.sql.ResultSet;
 public class LoginServlet extends HttpServlet {
 
     private Connection conn;
-    private String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    private String USER = "user";
-    private String PASS = "password";
-    private String DB_URL = "jdbc:mysql://localhost:43434/users";
+    private String USER = "kveldfntrmugxz";
+    private String PASS = "db68316f54928aa04ff541ca30a8f357d6cfd8450f478f7af482907ccb280d7c";
+    private String DB_URL = "jdbc:postgresql://ec2-50-17-197-184.compute-1.amazonaws.com:5432/dfe80ohgthfko5?password=db68316f54928aa04ff541ca30a8f357d6cfd8450f478f7af482907ccb280d7c&sslmode=require&user=kveldfntrmugxz\n" +
+            "DATABASE_URL=postgres://kveldfntrmugxz:db68316f54928aa04ff541ca30a8f357d6cfd8450f478f7af482907ccb280d7c@ec2-50-17-197-184.compute-1.amazonaws.com:5432/dfe80ohgthfko5";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -29,9 +29,10 @@ public class LoginServlet extends HttpServlet {
         String role = request.getParameter("role");
 
         try {
-            Class.forName(JDBC_DRIVER);
+
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
+            System.out.println("Connected to database");
             String query = "SELECT * FROM userAccounts WHERE Username=?";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setString(1, user);
