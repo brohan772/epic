@@ -29,7 +29,7 @@ public class LoginServlet extends HttpServlet {
         String role = request.getParameter("role");
 
         try {
-
+            Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             System.out.println("Connected to database");
