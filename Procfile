@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.example.Epic
+web: java -war target/Epic-1.0-SNAPSHOT.war
