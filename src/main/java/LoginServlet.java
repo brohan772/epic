@@ -32,6 +32,7 @@ public class LoginServlet extends HttpServlet {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             System.out.println("Connected to database");
+            System.out.println("Checking");
             String query = "SELECT * FROM users WHERE username=? AND pwd=? AND userrole=?";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setString(1, user);
