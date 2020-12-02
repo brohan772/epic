@@ -25,7 +25,7 @@ public class LoginServlet extends HttpServlet {
 
         String user = request.getParameter("username");
         String pass = request.getParameter("password");
-        String role = request.getParameter("role");
+        String role = request.getParameter("userRole");
 
         try {
             Class.forName("org.postgresql.Driver");
