@@ -15,8 +15,8 @@ import java.sql.ResultSet;
 public class LoginServlet extends HttpServlet {
 
     private Connection conn;
-    private String USER = "kveldfntrmugxz";
-    private String PASS = "db68316f54928aa04ff541ca30a8f357d6cfd8450f478f7af482907ccb280d7c";
+    private String USER = "qeihmzjrmhisbe";
+    private String PASS = "f3c71911846bcc6f8c71a3b0f407b97e69e1ec6bc7ddd9211b1cb04bdf2bfa2c";
     private String DB_URL = System.getenv("JDBC_DATABASE_URL");
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
