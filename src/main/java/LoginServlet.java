@@ -42,7 +42,8 @@ public class LoginServlet extends HttpServlet {
 
             if(rs.next()){
                 System.out.println("Reached rs");
-                session.setAttribute("username", user);
+                session.setAttribute("username", user +
+                        ", you have successfully logged in!");
             }
 
             conn.close();
