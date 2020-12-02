@@ -40,6 +40,7 @@ public class LoginServlet extends HttpServlet {
             ResultSet rs = stmt.executeQuery();
 
             if(rs.next()){
+                System.out.println("Reached rs");
                 session.setAttribute("username", user);
             }
 
