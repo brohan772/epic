@@ -50,7 +50,7 @@
                                 <option value="" selected="selected"> - Select Role - </option>
                                 <option value="admin">Admin</option>
                                 <option value="staff">Staff</option>
-                                <option value="student">Student</option>
+             EP                   <option value="student">Student</option>
                             </select>
                         </td>
                         <td>
