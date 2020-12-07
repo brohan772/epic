@@ -17,7 +17,7 @@
         <h2>Logo</h2>
     </div>
     <div id="menu">
-        <a href="#">Aboutttt</a>
+        <a href="#">About</a>
         <a href="#">Contact</a>
         <a href="#">Help</a>
     </div>
